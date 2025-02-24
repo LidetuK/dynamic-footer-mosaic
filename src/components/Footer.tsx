@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-7 space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Facebook Feed */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 animate-slide-in-right">
                 <h3 className="text-lg font-semibold mb-4 text-blue-400">Facebook Updates</h3>
                 <ScrollArea className="h-[300px]">
                   <div className="space-y-4">
@@ -35,14 +35,15 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold mb-4 text-blue-400">Twitter Updates</h3>
                 <ScrollArea className="h-[300px]">
                   <div className="space-y-4">
-                    <a 
-                      className="twitter-timeline" 
-                      data-height="300" 
-                      href="https://twitter.com/somaliabuletin?ref_src=twsrc%5Etfw"
-                    >
-                      Tweets by somaliabuletin
-                    </a>
-                    <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                    <iframe
+                      id="twitter-widget-0"
+                      scrolling="no"
+                      frameBorder="0"
+                      allowTransparency={true}
+                      allowFullScreen={true}
+                      className="w-full h-[300px]"
+                      src="https://platform.twitter.com/embed/Timeline.html?dnt=false&embedId=twitter-widget-0&frame=false&hideCard=false&hideThread=false&id=somaliabuletin&lang=en&theme=dark&widgetsVersion=2615f7e52b7e0%3A1702314776716"
+                    ></iframe>
                   </div>
                 </ScrollArea>
               </div>
