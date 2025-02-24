@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Social Media Feeds Column */}
-          <div className="md:col-span-8 space-y-8">
+          <div className="md:col-span-7 space-y-8">
             {/* Social Media Tabs */}
             <div className="flex gap-4 mb-4">
               <button 
@@ -42,7 +42,7 @@ const Footer = () => {
                 {activeTab === 'facebook' ? (
                   <div className="space-y-4 animate-slide-in-right">
                     <iframe 
-                      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
+                      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
                       width="100%" 
                       height="500" 
                       style={{ border: 'none', overflow: 'hidden' }} 
@@ -70,7 +70,16 @@ const Footer = () => {
           </div>
 
           {/* Right Column */}
-          <div className="md:col-span-4 space-y-8">
+          <div className="md:col-span-5 space-y-8">
+            {/* Logo */}
+            <div className="w-48 h-48 mx-auto relative">
+              <img
+                src="/lovable-uploads/92a760e1-f72f-4fbe-9e0c-cf49ab547bad.png"
+                alt="Somalia Bulletin Logo"
+                className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+
             {/* Stay Updated Section */}
             <div className="bg-[#1e2029] rounded-xl p-6">
               <h3 className="text-xl font-semibold mb-4">Stay Updated</h3>
@@ -84,15 +93,6 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
-            </div>
-
-            {/* Logo */}
-            <div className="w-48 h-48 mx-auto relative">
-              <img
-                src="/lovable-uploads/92a760e1-f72f-4fbe-9e0c-cf49ab547bad.png"
-                alt="Somalia Bulletin Logo"
-                className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
-              />
             </div>
 
             {/* Social Media Links */}
