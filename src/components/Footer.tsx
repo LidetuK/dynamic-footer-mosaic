@@ -10,43 +10,35 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Social Media Feeds Column */}
           <div className="md:col-span-7 space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Facebook Feed */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 animate-slide-in-right">
-                <h3 className="text-lg font-semibold mb-4 text-blue-400">Facebook Updates</h3>
-                <ScrollArea className="h-[300px]">
-                  <div className="space-y-4">
-                    <iframe 
-                      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
-                      width="100%" 
-                      height="300" 
-                      style={{ border: 'none', overflow: 'hidden' }} 
-                      scrolling="no" 
-                      frameBorder="0" 
-                      allowFullScreen={true} 
-                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    />
-                  </div>
-                </ScrollArea>
-              </div>
+            {/* Social Media Tabs */}
+            <div className="flex gap-4 mb-4">
+              <button className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                <Facebook className="w-5 h-5" />
+                Facebook
+              </button>
+              <button className="flex items-center gap-2 bg-gray-700 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                <Twitter className="w-5 h-5" />
+                Twitter
+              </button>
+            </div>
 
-              {/* Twitter Feed */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4">
-                <h3 className="text-lg font-semibold mb-4 text-blue-400">Twitter Updates</h3>
-                <ScrollArea className="h-[300px]">
-                  <div className="space-y-4">
-                    <iframe
-                      id="twitter-widget-0"
-                      scrolling="no"
-                      frameBorder="0"
-                      allowTransparency={true}
-                      allowFullScreen={true}
-                      className="w-full h-[300px]"
-                      src="https://platform.twitter.com/embed/Timeline.html?dnt=false&embedId=twitter-widget-0&frame=false&hideCard=false&hideThread=false&id=somaliabuletin&lang=en&theme=dark&widgetsVersion=2615f7e52b7e0%3A1702314776716"
-                    ></iframe>
-                  </div>
-                </ScrollArea>
-              </div>
+            <div className="bg-[#1a1b1e] rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-4">Latest Facebook Posts</h3>
+              <ScrollArea className="h-[400px]">
+                <div className="space-y-4">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
+                    width="100%" 
+                    height="500" 
+                    style={{ border: 'none', overflow: 'hidden' }} 
+                    scrolling="no" 
+                    frameBorder="0" 
+                    allowFullScreen={true} 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    className="animate-slide-in-right"
+                  />
+                </div>
+              </ScrollArea>
             </div>
           </div>
 
