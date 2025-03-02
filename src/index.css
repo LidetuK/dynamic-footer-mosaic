@@ -97,5 +97,14 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow: hidden; /* Prevent scrollbars on body */
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    overflow: hidden; /* Prevent scrollbars on html */
+    height: 100%;
+    width: 100%;
   }
 }
