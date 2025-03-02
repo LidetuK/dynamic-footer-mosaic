@@ -10,37 +10,6 @@ const Footer = () => {
     <footer className="w-full bg-[#0f1117] text-white py-8 px-4 md:py-12 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
-          {/* Mobile Facebook Feed (visible only on mobile) */}
-          <div className="lg:hidden w-full order-1 space-y-6">
-            <div className="flex gap-2 mb-4">
-              <button 
-                className="flex items-center gap-1 px-3 py-2 rounded-lg transition-colors text-sm whitespace-nowrap bg-blue-600 text-white"
-              >
-                <Facebook className="w-4 h-4" />
-                Facebook
-              </button>
-            </div>
-
-            <div className="bg-[#1e2029] rounded-xl p-4">
-              <h3 className="text-lg font-semibold mb-3">
-                Latest Facebook Posts
-              </h3>
-              <div className="animate-slide-in-right w-full">
-                <iframe 
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=400&small_header=true&adapt_container_width=true&hide_cover=false" 
-                  width="100%" 
-                  height="400" 
-                  style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
-                  scrolling="no" 
-                  frameBorder="0" 
-                  allowFullScreen={true} 
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  className="max-w-full"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Logo and Stay Updated Column */}
           <div className="lg:col-span-4 space-y-6 md:space-y-8 order-2 lg:order-1">
             {/* Logo */}
@@ -125,6 +94,37 @@ const Footer = () => {
                   />
                 </div>
               </ScrollArea>
+            </div>
+          </div>
+
+          {/* Mobile Facebook Feed (visible only on mobile) */}
+          <div className="lg:hidden w-full order-1 space-y-6">
+            <div className="flex gap-2 mb-4">
+              <button 
+                className="flex items-center gap-1 px-3 py-2 rounded-lg transition-colors text-sm whitespace-nowrap bg-blue-600 text-white"
+              >
+                <Facebook className="w-4 h-4" />
+                Facebook
+              </button>
+            </div>
+
+            <div className="bg-[#1e2029] rounded-xl p-4">
+              <h3 className="text-lg font-semibold mb-3">
+                Latest Facebook Posts
+              </h3>
+              <div className="animate-slide-in-right w-full">
+                <iframe 
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=400&small_header=true&adapt_container_width=true&hide_cover=false" 
+                  width="100%" 
+                  height="400" 
+                  style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
+                  scrolling="no" 
+                  frameBorder="0" 
+                  allowFullScreen={true} 
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  className="max-w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
