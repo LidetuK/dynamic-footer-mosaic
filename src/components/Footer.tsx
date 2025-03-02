@@ -11,27 +11,27 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
           {/* Logo and Stay Updated Column */}
-          <div className="lg:col-span-4 space-y-6 md:space-y-8 order-2 lg:order-1">
+          <div className="lg:col-span-5 space-y-6 md:space-y-8 order-2 lg:order-1">
             {/* Logo */}
-            <div className="w-32 h-32 md:w-48 md:h-48 mx-auto relative">
+            <div className="w-28 h-28 md:w-36 md:h-36 mx-auto relative">
               <img
                 src="/lovable-uploads/output-onlinepngtools (78).png"
-                alt="Somalia Bulletin Logo"
+                alt="East Africa Bulletin Logo"
                 className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
 
             {/* Stay Updated Section */}
-            <div className="bg-[#1e2029] rounded-xl p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Stay Updated</h3>
+            <div className="bg-[#1e2029] rounded-xl p-4 md:p-5">
+              <h3 className="text-lg md:text-xl font-semibold mb-3">Stay Connected</h3>
               <div className="space-y-3 md:space-y-4">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Enter your email address"
                   className="w-full px-3 py-2 md:px-4 md:py-2 bg-[#0f1117] border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-sm md:text-base"
                 />
                 <button className="w-full bg-blue-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm md:text-base">
-                  Subscribe
+                  Subscribe Now
                 </button>
               </div>
             </div>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Desktop Facebook Feed Column (only visible on desktop) */}
-          <div className="hidden lg:block lg:col-span-8 space-y-6 md:space-y-8 order-1 lg:order-2">
+          <div className="hidden lg:block lg:col-span-7 space-y-6 md:space-y-8 order-1 lg:order-2">
             {/* Social Media Tabs */}
             <div className="flex gap-2 md:gap-4 mb-4 overflow-x-auto pb-2">
               <button 
@@ -79,12 +79,12 @@ const Footer = () => {
               <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
                 Latest Facebook Posts
               </h3>
-              <ScrollArea className="h-[500px] w-full">
+              <ScrollArea className="h-[450px] w-full max-w-[580px] mx-auto">
                 <div className="animate-slide-in-right w-full">
                   <iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=650&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
-                    width="650" 
-                    height="500" 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=500&height=450&small_header=true&adapt_container_width=true&hide_cover=false" 
+                    width="500" 
+                    height="450" 
                     style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
                     scrolling="no" 
                     frameBorder="0" 
@@ -112,10 +112,10 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-3">
                 Latest Facebook Posts
               </h3>
-              <div className="animate-slide-in-right w-full">
+              <div className="animate-slide-in-right w-full max-w-[300px] mx-auto">
                 <iframe 
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=400&small_header=true&adapt_container_width=true&hide_cover=false" 
-                  width="100%" 
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false" 
+                  width="300" 
                   height="400" 
                   style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
                   scrolling="no" 
