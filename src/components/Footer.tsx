@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
 import { ScrollArea } from './ui/scroll-area';
 
 const Footer = () => {
-  const [activeTab, setActiveTab] = useState<'facebook' | 'twitter'>('facebook');
+  const [activeTab, setActiveTab] = useState<'facebook'>('facebook'); // Remove 'twitter'
 
   return (
     <footer className="w-full bg-[#0f1117] text-white py-12 px-4 md:px-8">
@@ -22,15 +21,6 @@ const Footer = () => {
               >
                 <Facebook className="w-5 h-5" />
                 Facebook
-              </button>
-              <button 
-                className={`flex items-center gap-2 px-6 py-2 rounded-lg transition-colors ${
-                  activeTab === 'twitter' ? 'bg-blue-600 text-white' : 'bg-[#1e2029] text-gray-400 hover:bg-[#2a2b36]'
-                }`}
-                onClick={() => setActiveTab('twitter')}
-              >
-                <Twitter className="w-5 h-5" />
-                Twitter
               </button>
             </div>
 
@@ -74,7 +64,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="w-48 h-48 mx-auto relative">
               <img
-                src="/lovable-uploads/92a760e1-f72f-4fbe-9e0c-cf49ab547bad.png"
+                src="/lovable-uploads/output-onlinepngtools (78).png"
                 alt="Somalia Bulletin Logo"
                 className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
               />
@@ -97,23 +87,23 @@ const Footer = () => {
 
             {/* Social Media Links */}
             <div className="flex justify-center space-x-6">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
+              <a href="https://web.facebook.com/profile.php?id=61573019588483" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
+              <a href="https://x.com/somaliabuletin" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
+              <a href="https://x.com/somaliabuletin" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
+              <a href="https://www.youtube.com/@somaliaBulletin" target="_blank" rel="noopener noreferrer" className="bg-[#1e2029] p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-400">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
 
             {/* Copyright */}
             <div className="text-center text-sm text-gray-400">
-              <p>© Copyright Somalia Bulletin {new Date().getFullYear()}.</p>
+              <p>© Copyright East Africa Bulletin {new Date().getFullYear()}.</p>
               <p>Designed and Developed by{' '}
                 <a href="https://godigitalafrica.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
                   Go Digital Africa
