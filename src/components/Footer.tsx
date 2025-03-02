@@ -10,59 +10,39 @@ const Footer = () => {
     <footer className="w-full bg-[#0f1117] text-white py-8 px-4 md:py-12 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
-          {/* Social Media Feeds Column */}
-          <div className="lg:col-span-7 space-y-6 md:space-y-8 order-2 lg:order-1">
-            {/* Social Media Tabs */}
-            <div className="flex gap-2 md:gap-4 mb-4 overflow-x-auto pb-2">
+          {/* Mobile Facebook Feed (visible only on mobile) */}
+          <div className="lg:hidden w-full order-1 space-y-6">
+            <div className="flex gap-2 mb-4">
               <button 
-                className={`flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-2 rounded-lg transition-colors text-sm md:text-base whitespace-nowrap ${
-                  activeTab === 'facebook' ? 'bg-blue-600 text-white' : 'bg-[#1e2029] text-gray-400 hover:bg-[#2a2b36]'
-                }`}
-                onClick={() => setActiveTab('facebook')}
+                className="flex items-center gap-1 px-3 py-2 rounded-lg transition-colors text-sm whitespace-nowrap bg-blue-600 text-white"
               >
-                <Facebook className="w-4 h-4 md:w-5 md:h-5" />
+                <Facebook className="w-4 h-4" />
                 Facebook
               </button>
             </div>
 
-            <div className="bg-[#1e2029] rounded-xl p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
-                {activeTab === 'facebook' ? 'Latest Facebook Posts' : 'Latest Tweets'}
+            <div className="bg-[#1e2029] rounded-xl p-4">
+              <h3 className="text-lg font-semibold mb-3">
+                Latest Facebook Posts
               </h3>
-              <ScrollArea className="h-[300px] md:h-[500px] w-full">
-                {activeTab === 'facebook' ? (
-                  <div className="animate-slide-in-right w-full">
-                    <iframe 
-                      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
-                      width="100%" 
-                      height="500" 
-                      style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
-                      scrolling="no" 
-                      frameBorder="0" 
-                      allowFullScreen={true} 
-                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                      className="max-w-full"
-                    />
-                  </div>
-                ) : (
-                  <div className="animate-slide-in-right w-full">
-                    <iframe
-                      id="twitter-widget-0"
-                      scrolling="no"
-                      frameBorder="0"
-                      allowTransparency={true}
-                      allowFullScreen={true}
-                      className="w-full h-[300px] md:h-[500px]"
-                      src="https://platform.twitter.com/embed/Timeline.html?dnt=false&embedId=twitter-widget-0&frame=false&hideCard=false&hideThread=false&id=somaliabuletin&lang=en&theme=dark&widgetsVersion=2615f7e52b7e0%3A1702314776716"
-                    ></iframe>
-                  </div>
-                )}
-              </ScrollArea>
+              <div className="animate-slide-in-right w-full">
+                <iframe 
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=340&height=400&small_header=true&adapt_container_width=true&hide_cover=false" 
+                  width="100%" 
+                  height="400" 
+                  style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
+                  scrolling="no" 
+                  frameBorder="0" 
+                  allowFullScreen={true} 
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  className="max-w-full"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="lg:col-span-5 space-y-6 md:space-y-8 order-1 lg:order-2">
+          {/* Logo and Stay Updated Column */}
+          <div className="lg:col-span-4 space-y-6 md:space-y-8 order-2 lg:order-1">
             {/* Logo */}
             <div className="w-32 h-32 md:w-48 md:h-48 mx-auto relative">
               <img
@@ -111,6 +91,40 @@ const Footer = () => {
                   Go Digital Africa
                 </a>
               </p>
+            </div>
+          </div>
+
+          {/* Desktop Facebook Feed Column (only visible on desktop) */}
+          <div className="hidden lg:block lg:col-span-8 space-y-6 md:space-y-8 order-1 lg:order-2">
+            {/* Social Media Tabs */}
+            <div className="flex gap-2 md:gap-4 mb-4 overflow-x-auto pb-2">
+              <button 
+                className="flex items-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-2 rounded-lg transition-colors text-sm md:text-base whitespace-nowrap bg-blue-600 text-white"
+              >
+                <Facebook className="w-4 h-4 md:w-5 md:h-5" />
+                Facebook
+              </button>
+            </div>
+
+            <div className="bg-[#1e2029] rounded-xl p-4 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">
+                Latest Facebook Posts
+              </h3>
+              <ScrollArea className="h-[500px] w-full">
+                <div className="animate-slide-in-right w-full">
+                  <iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D61573019588483&tabs=timeline&width=650&height=500&small_header=true&adapt_container_width=true&hide_cover=false" 
+                    width="650" 
+                    height="500" 
+                    style={{ border: 'none', overflow: 'hidden', maxWidth: '100%' }} 
+                    scrolling="no" 
+                    frameBorder="0" 
+                    allowFullScreen={true} 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    className="max-w-full"
+                  />
+                </div>
+              </ScrollArea>
             </div>
           </div>
         </div>
